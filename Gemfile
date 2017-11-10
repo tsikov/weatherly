@@ -53,6 +53,8 @@ group :test do
   gem 'minitest-rails-capybara', '~> 3.0'
   gem 'selenium-webdriver', '~> 3.7'
   gem 'chromedriver-helper'
+  gem 'vcr', '~> 3.0'
+  gem 'webmock', '~> 3.0'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
