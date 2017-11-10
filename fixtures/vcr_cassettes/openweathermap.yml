@@ -208,4 +208,46 @@ http_interactions:
         clouds","icon":"03n"}],"base":"stations","main":{"temp":280.15,"pressure":1019,"humidity":100,"temp_min":280.15,"temp_max":280.15},"visibility":6000,"wind":{"speed":2.1,"deg":210},"clouds":{"all":32},"dt":1510344000,"sys":{"type":1,"id":5444,"message":0.0034,"country":"BG","sunrise":1510290784,"sunset":1510326471},"id":727011,"name":"Sofia","cod":200}'
     http_version: 
   recorded_at: Fri, 10 Nov 2017 20:28:50 GMT
+- request:
+    method: get
+    uri: http://api.openweathermap.org/data/2.5/weather?appid=91308bd8f63e0d7fb201119449dbcd79&q=Berlin,Germany
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - openresty
+      Date:
+      - Fri, 10 Nov 2017 20:49:02 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '446'
+      Connection:
+      - keep-alive
+      X-Cache-Key:
+      - "/data/2.5/weather?q=berlin,germany"
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: UTF-8
+      string: '{"coord":{"lon":13.41,"lat":52.52},"weather":[{"id":801,"main":"Clouds","description":"few
+        clouds","icon":"02n"}],"base":"stations","main":{"temp":279.15,"pressure":1006,"humidity":81,"temp_min":279.15,"temp_max":279.15},"visibility":10000,"wind":{"speed":7.7,"deg":260},"clouds":{"all":20},"dt":1510345200,"sys":{"type":1,"id":4892,"message":0.0038,"country":"DE","sunrise":1510294850,"sunset":1510327153},"id":2950159,"name":"Berlin","cod":200}'
+    http_version: 
+  recorded_at: Fri, 10 Nov 2017 20:49:02 GMT
 recorded_with: VCR 3.0.3
