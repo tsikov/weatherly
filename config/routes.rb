@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'location', to: "locations#show"
+  get 'location/random', to: "locations#random"
 
   root to: "locations#index"
 
