@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  city: Berlin
+  country: Germany
+
+two:
+  city: Barcelona
+  country: Spain
