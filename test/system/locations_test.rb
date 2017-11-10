@@ -24,4 +24,15 @@ class LocationsTest < ApplicationSystemTestCase
     assert_selector "h1", text: /\w+\, \w+/
     assert_text /The temperature is \d+\.\d+ degrees/
   end
+
+  test 'should display location not found if location does not exist' do
+    visit root_url
+
+    fill_in "city", with: "Atlantis"
+    fill_in "country", with: "Greece"
+
+    click_on "OK"
+
+    assert_text /Location not found/
+  end
 end
