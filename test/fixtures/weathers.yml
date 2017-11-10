@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  temp: 1.5
+  humidity: 1
+  pressure: 1
+  references: MyString
+  location: MyString
+
+two:
+  temp: 1.5
+  humidity: 1
+  pressure: 1
+  references: MyString
+  location: MyString

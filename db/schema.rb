@@ -10,11 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171110084436) do
+ActiveRecord::Schema.define(version: 20171110101540) do
 
   create_table "locations", force: :cascade do |t|
     t.string "city", null: false
     t.string "country", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "weathers", force: :cascade do |t|
+    t.float "temp"
+    t.integer "humidity"
+    t.integer "pressure"
+    t.string "references"
+    t.string "location"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
