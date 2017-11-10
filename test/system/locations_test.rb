@@ -12,5 +12,6 @@ class LocationsTest < ApplicationSystemTestCase
     assert_selector "h1", text: "Barcelona, Spain"
 
     assert_text /The temperature is \d+ degrees/
+    assert_text /The temperature is \d+\.\d+ degrees/
   end
 end
