@@ -6,6 +6,8 @@ class Weather < ApplicationRecord
 
   validates :temp, :pressure, :humidity, presence: true
 
+  scope :within_24h, lambda { where("created_at >= ?", 1.day.ago) }
+
   def self.search(location)
     api_key = ENV['owm_key']
     url = "http://api.openweathermap.org/data/2.5/weather?q=#{location}&appid=#{api_key}"
@@ -24,13 +26,12 @@ class Weather < ApplicationRecord
                 temp: weather["temp"],
                 humidity: weather["humidity"],
                 pressure: weather["pressure"])
-
   end
 
-  def Weather.current(location)
-    last_in_db = location.last_weather
-    if last_in_db and last_in_db.created_at.to_date == Date.today
-      last_in_db
+  def self.current(location)
+    weather = Weather.where(location: location).within_24h.first
+    if weather
+      weather
     else
       weather = Weather.search(location.print)
       weather.save

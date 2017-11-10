@@ -42,4 +42,16 @@ class WeatherTest < ActiveSupport::TestCase
     end
   end
 
+  test 'should return a weather object from the last day only' do
+    refute Weather.within_24h.empty?
+
+    Weather.destroy_all
+    location = Location.first
+    weather = Weather.create!(temp: 3.14, pressure: 2,
+                              humidity: 3, location: location)
+    weather.update(created_at: 5.day.ago)
+
+    assert Weather.within_24h.empty?
+  end
+
 end

@@ -3,10 +3,6 @@ class Location < ApplicationRecord
 
   has_many :weathers
 
-  def last_weather
-    Weather.where(location: self).last
-  end
-
   def print
     "#{city},#{country}"
   end
