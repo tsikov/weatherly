@@ -4,12 +4,10 @@ one:
   temp: 1.5
   humidity: 1
   pressure: 1
-  references: MyString
-  location: MyString
+  location_id: 1
 
 two:
   temp: 1.5
   humidity: 1
   pressure: 1
-  references: MyString
-  location: MyString
+  location_id: 2

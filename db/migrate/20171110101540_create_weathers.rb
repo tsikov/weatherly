@@ -4,8 +4,7 @@ class CreateWeathers < ActiveRecord::Migration[5.1]
       t.float :temp
       t.integer :humidity
       t.integer :pressure
-      t.string :references
-      t.string :location
+      t.references :location
 
       t.timestamps
     end

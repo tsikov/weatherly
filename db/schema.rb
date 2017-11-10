@@ -23,10 +23,10 @@ ActiveRecord::Schema.define(version: 20171110101540) do
     t.float "temp"
     t.integer "humidity"
     t.integer "pressure"
-    t.string "references"
-    t.string "location"
+    t.integer "location_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["location_id"], name: "index_weathers_on_location_id"
   end
 
 end
